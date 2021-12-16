@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  <label for="fname">ชื่อผู้แจ้ง:</label>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="iname">ปัญหาที่:</label>
+  <input type="text" id="iname" name="iname" value=""><br>
+  <label for="jname">รหัสของข้อมูลที่เกี่ยวข้อง:</label>
+  <input type="text" id="jname" name="jname" value="">
+  <label for="kname">ลักษณะของปัญหา:</label>
+  <input type="text" id="kname" name="kname" value=""><br>
+  <label for="lname">คำอธิบายเพิ่มเติม:</label>
+  <input type="text" id="lname" name="lname" value=""><br>
+  
+  <input type="submit" value="Submit">
+</form> 
+</p> <br><header><h6>กลับสู่หน้าหลัก</h6></header></p>  <br>
+<a href ={% url "homeapp:home" %}> back home </a>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>

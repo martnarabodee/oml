@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OML</title>
+</head>
+<body>
+    <h1>Welcome to OptimumLearning</h1>
+    <h2>
+        <a href ="{% url "study:course_home" %}">คอร์ส </a>  <br>
+        <a href ="{% url "study:problem_select" %}">โจทย์</a>  <br>
+        <a href ="{% url "homeapp:about" %}">เกี่ยวกับ</a>  <br>
+        <a href ="{% url "homeapp:complain_form" %}">แจ้งปัญหา</a>  <br>
+        <a href ="{% url "homeapp:contact" %}">ติดต่อ</a>  <br>
+        {% if request.user.is_authenticated %}
+            <a href ="{% url "homeapp:profile" %}">บัญชีของฉัน</a>  <br> 
+            <h3>
+                <a href ="{% url "account_logout"%}">ออกจากระบบ</a> <br>
+            </h3>
+        {% else %}
+            {% load socialaccount %}
+            <a href ="{% url "account_login" %}">เข้าสู่ระบบ</a>  <br>
+        <a href ="{% url "homeapp:term" %}">ลงทะเบียน</a>  <br>
+        {% endif %}
+        </h2>
+</body>
+</html>
