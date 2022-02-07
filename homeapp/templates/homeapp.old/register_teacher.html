@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  <label for="fname">ชื่อผู้ใช้:</label>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="iname">รหัสผ่าน:</label>
+  <input type="text" id="iname" name="iname" value=""><br><br>
+  <label for="jname">ชื่อ-นามสกุล:</label>
+  <input type="text" id="jname" name="jname" value="">
+  <label for="kname">E-mail:</label>
+  <input type="text" id="kname" name="kname" value=""><br>
+  <label for="lname">โรงเรียน:</label>
+  <input type="text" id="lname" name="lname" value="">
+  <label for="mname">สอนระดับชั้น:</label>
+  <input type="text" id="mname" name="mname" value=""><br>
+  <label for="nname">ข้อมูลติดต่อเพิ่มเติม:</label>
+  <input type="text" id="nname" name="nname" value=""><br><br>
+  <input type="submit" value="Submit">
+</form> 
+</p> <br><header><h6>กลับสู่หน้าหลัก</h6></header> <br>
+<a href ="{% url "homeapp:home" %}" target = > back home </a></p> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
