@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
@@ -9,7 +9,7 @@
     
 </head>
 <body>
-
+    <div style="background:#435D74">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
           <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
@@ -20,14 +20,14 @@
           <a href="{% url "study:problem_do" %}" class="nav-link px-2 link-white"><font color="white"><h5>โจทย์</h5></font></a>
           <a href="{% url "homeapp:about" %}" class="nav-link px-2 link-white"><font color="white"><h5>เกี่ยวกับ</h5></font></a>
           <a href="{% url "homeapp:complain_form" %}" class="nav-link px-2 link-white"><font color="white"><h5>แจ้งปัญหา</h5></font></a>
-          <a href="{% url "homeapp:contact" %}" class="nav-link px-2 link-white"><font color="white"><h5>ติดต่อ</h5></font></a>
-        </ul>
-        <div style="background:435D74">
-          <a href="{% url "homeapp:home" %}"><button type="button" class="btn btn-danger ">เข้าสู่ระบบ</button></a>
+          <a href="{% url "homeapp:contact" %}" class="nav-link px-2 link-white"><font color="white"><h5>ติดต่อ</h5></font></a><a href="{% url "homeapp:home" %}"><button type="button" class="btn btn-danger ">เข้าสู่ระบบ</button></a>
           <a href = "{% url "homeapp:home" %}"><button type="button" class="btn btn-danger">ลงทะเบียน</button></a>
+        </ul>
         </div>
+
+
       </header>
-    <div style="background:364966">
+    <div style="background:#364966">
     <h1><center>Welcome to OptimumLearning</center></h1>
     <br><br><center><h1>ยินดีต้อนรับเข้าสู่ระบบ</h1></center>
     <br><br><center><h1>แหล่งเรียนรู้คณิตศาสตร์เพื่อนักเรียน</h1></center>
