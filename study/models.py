@@ -33,10 +33,12 @@ class CourseMaterial (models.Model):
     def __str__(self) -> str:
         return self.course_id
 
+
 class RegisterCourse (models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    #user = models.OneToOneField(User, on_delete=models.CASCADE)
     course_id = models.ForeignKey(CourseInfo, on_delete=models.CASCADE)
     RegisterCourseTime = models.DateTimeField
+
 
 # Problem Classes
 class ProblemInfoDeep (models.Model):
