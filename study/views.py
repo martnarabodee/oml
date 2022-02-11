@@ -36,3 +36,15 @@ def problem_select(request):
 
 def problem_do(request):
     return render(request, 'study/problem_do.html')
+
+def problem_demo_pre1(request):
+    return render(request, 'study/problem_demo_pre1.html')
+
+def problem_demo_pre2(request):
+    return render(request, 'study/problem_demo_pre2.html')
+
+def problem_demo_post1(request):
+    return render(request, 'study/problem_demo_post1.html')
+
+def problem_demo_post2(request):
+    return render(request, 'study/problem_demo_post2.html')

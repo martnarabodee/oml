@@ -15,6 +15,9 @@
       }
     </style>
 </head>
+
+{% if user.is_superuser %}
+
 <body style="background:#364966">
     <div style="background:#435D74">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -23,26 +26,26 @@
         </a>
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <br><a href="{% url "study:course_home" %}" class="nav-link px-2 link-white"><font color="white"><h5>คอร์ส</h5></font></a>
-          <a href="{% url "study:problem_do" %}" class="nav-link px-2 link-white"><font color="white"><h5>โจทย์</h5></font></a>
+          <a href="{% url "homeapp:error" %}" class="nav-link px-2 link-white"><font color="white"><h5>โจทย์</h5></font></a>
           <a href="{% url "homeapp:about" %}" class="nav-link px-2 link-white"><font color="white"><h5>เกี่ยวกับ</h5></font></a>
-          <a href="{% url "homeapp:complain_form" %}" class="nav-link px-2 link-white"><font color="white"><h5>แจ้งปัญหา</h5></font></a>
+    <!--      <a href="{% url "homeapp:complain_form" %}" class="nav-link px-2 link-white"><font color="white"><h5>แจ้งปัญหา</h5></font></a> -->
             &nbsp;<a href="{% url "homeapp:contact" %}" class="nav-link px-2 link-white"><font color="white"><h5>ติดต่อ</h5></font></a>
-            <a href="{% url "homeapp:home" %}"><button type="button" class="btn btn-danger ">เข้าสู่ระบบ</button></a>
-            &nbsp;<a href = "{% url "homeapp:home" %}"><button type="button" class="btn btn-danger">ลงทะเบียน</button></a>
+            <a href="{% url "homeapp:error" %}" class="nav-link px-2 link-white"><font color="white"><h5>เข้าสู่ระบบ</h5></font></a>
+            &nbsp;<a href = "{% url "homeapp:error" %}"><button type="button" class="btn btn-danger">ลงทะเบียน</button></a>
         </ul>
     </div>
       </header>
     <div style="background:#364966" class="text-white">
-    <h1><center>Welcome to OptimumLearning</center></h1>
-    <br><br><center><h1>ยินดีต้อนรับเข้าสู่ระบบ</h1></center>
-    <br><br><center><h1>แหล่งเรียนรู้คณิตศาสตร์เพื่อนักเรียน</h1></center>
+    <br><center><h1>แหล่งเรียนรู้คณิตศาสตร์เพื่อนักเรียน</h1></center>
     <br><center><h1>เรียนได้ตามรูปแบบการเรียนรู้ของตนเอง</h1></center>
-    <br><br><center><h2>ออกแบบรูปแบบการเรียนโดย AI</h2></center>
-    <br><center><h2>พัฒนาโดย</h2></center>
-    <br><center><h2>รุ่นพี่ที่มากประสบการณ์</h2></center>
+    <br><br><center><h2>ออกแบบรูปแบบการเรียนรู้โดย AI</h2></center>
+    <br><center><h2>พัฒนาโดยรุ่นพี่ที่มากประสบการณ์</h2></center>
     <br><center><h2>เข้าใช้ระบบได้เลย ฟรี!</h2></center>
-    <br><br><center><h1>ท้าทายโจทย์ตามพัฒนาการของคุณ</h1></center>
-    <br><br><center><a href = "{% url "homeapp:home" %}"><button type="button" class="btn btn-danger btn-lg"><h1>เริ่มเรียน</h1></button><a></a></center>
+    <br><br><center><a href = "{% url "study:course_home" %}"><button type="button" class="btn btn-danger btn-lg"><h1>เริ่มเรียนเลย</h1></button><a></a></center>
     </div>
 </body>
 </html>
+
+{% else %}
+    <h1>ระบบ OML ได้ปิดการใช้งานแล้วในขณะนี้</h1>
+{% endif %}

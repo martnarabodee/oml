@@ -16,9 +16,12 @@
       }
     </style>
 </head>
+
+    {% if user.is_superuser %}
+
 <body style="background:#364966">
     <div style="background:#435D74" class="text-white">
-    <center><h1>เรื่อง......</h1></center> <br><br><br>
+    <center><h1>อัตราส่วนตรีโกณมิติของสามเหลี่ยมมุมแหลม</h1></center> <br><br><br>
     </div>
     <div style="background:#435D74" class="text-white">
     <center><h6>รหัสVDO.....</h6></center> <br>
@@ -27,7 +30,10 @@
     <center><h6>กลับสู่หน้าหลัก</h6></center> <br>
         <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg"> back to homepage </button></a></center> <br> 
         <center><h6>ถัดไป</h6></center> <br>
-        <center><a href ={% url "study:problem_do" %} target = ><button type="button" class="btn btn-danger btn-lg"> next </button></a></center>  
+        <center><a href ={% url "study:problem_demo_post1" %} target = ><button type="button" class="btn btn-danger btn-lg"> next </button></a></center>
     </div>
 </body>
 </html>
+
+{% else %}
+{% endif %}

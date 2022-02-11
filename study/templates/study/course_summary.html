@@ -16,6 +16,9 @@
       }
     </style>
 </head>
+
+    {% if user.is_superuser %}
+
 <body style="background:#364966">
     <div style="background:#435D74" class="text-white">
     <center><h5>ชื่อ-นามสกุล.....</h5></center><br>
@@ -25,7 +28,10 @@
     <center><h5>คำติชม.....</h5></center><br>
 
     <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg"> back to homepage </button></a></center>  <br>
-    <center><a href ={% url "study:course_certificate" %} target = ><button type="button" class="btn btn-danger btn-lg"> print certificate </button></a></center> 
+    <center><a href ={% url "homeapp:error" %} target = ><button type="button" class="btn btn-danger btn-lg"> print certificate </button></a></center>
     </div>
 </body>
 </html>
+
+{% else %}
+{% endif %}
