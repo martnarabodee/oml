@@ -16,17 +16,19 @@
       }
     </style>
 </head>
+
+    {% if user.is_superuser %}
+
 <body style="background:#364966">
     <div style="background:#435D74" class="text-white">
     <center><h1> คำแนะนำก่อนเรียน</h1></center> <br><br>
     </div>
     <div style="background:#435D74" class="text-white">
-    <center><h2> ดาวน์โหลดเอกสาร</h2></center> <br>
-    <center><a href ={% url "study:sheet" %} target = ><button type="button" class="btn btn-danger btn-lg">dawload sheet</button></a></center> <br> 
-    <center><h2>กดเพื่อเริ่มเรียน</h2></center> <br>
-    <center><a href ={% url "study:study" %} target = ><button type="button" class="btn btn-danger btn-lg">start to study</button></a></center>  <br>
-    <center><h2>กลับสู่หน้าหลัก</h2></center> <br>
-    <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg">back home</button></a></center> 
+    <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg">ดาวน์โหลดเอกสาร</button></a></center> <br>
+    <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg">เริ่มเรียน</button></a></center>  <br>
+    <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg">กลับสู่หน้าหลัก</button></a></center>
     </div>
 </body>
 </html>
+{% else %}
+{% endif %}

@@ -41,3 +41,6 @@ def signin_form(request):
 
 def signin_success(request):
     return render(request, 'homeapp/signin_success.html')
+
+def error(request):
+    return render(request, 'homeapp/error.html')
