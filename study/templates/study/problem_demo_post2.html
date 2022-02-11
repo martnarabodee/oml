@@ -20,16 +20,26 @@
     {% if user.is_superuser %}
 
 <body style="background:#364966">
-    <div style="background:#435D74" class="text-white">
-    <center><h2>ทดสอบหลังเรียน M132005</h2></center> <br>
-    </div>
-    <div style="background:#435D74" class="text-white">
-    <center><h5>ชื่อ-นามสกุล.....</h5></center> <br>
-    <center><h5>รหัสข้อ.....</h5><p>แจ้งปัญหา</p> </center>
-    <center><a href {% url "homeapp:complain_form" %} target = ><button type="button" class="btn btn-danger btn-lg">complain</button></a></center> <br>
-    <center><a href ={% url "homeapp:home" %}><button type="button" class="btn btn-danger btn-lg"> back to homepage </button></a></center>   <br>
+<div class="text-white">
+    <center><h1>ทดสอบหลังเรียน M132005</h1></center>
+        <br>
+        <center>
+            <img src="trigon_post.png" width="700" height="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="trigon_post2.png" width="360" height="300">
+        </center>
+    <br><br>
+    <center><button type="button" class="btn btn-danger btn-lg">แจ้งปัญหา</button></center>
+
+    <br>
     <center><a href ={% url "study:course_summary" %} ><button type="button" class="btn btn-danger btn-lg">ส่งแบบทดสอบ</button></a></center>
-    </div>
+<br><br>
+    <div style="background:#435D74">
+        <br>
+      <center><a href ={% url "homeapp:home" %}><button type="button" class="btn btn-danger btn-lg">ย้อนกลับ</button></a>
+          &nbsp;&nbsp;&nbsp;<button  type="button" class="btn btn-danger btn-lg">ถัดไป</button></center>
+          <br>
+      </div
+</div>
 <br><br>
 <footer>
     <span><h3><font color="white">Optimal</font><font color="red">Learning</font><font color="white"> V. a1.0</font></h3></span>
