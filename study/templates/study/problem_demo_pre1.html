@@ -23,11 +23,23 @@
     <div style="background:#435D74" class="text-white">
     <center><h1>คำชี้แจงก่อนทำแบบทดสอบก่อนเรียน</h1></center> <br>
     </div>
-    <center><h5>ชื่อ-นามสกุล.....</h5></center> <br>
-    <center><h5>รหัสข้อ.....</h5><p>แจ้งปัญหา</p> </center>
-    <center><a href {% url "homeapp:complain_form" %} target = ><button type="button" class="btn btn-danger btn-lg">complain</button></a></center> <br>
-    <center><a href ={% url "homeapp:home" %}><button type="button" class="btn btn-danger btn-lg"> back to homepage </button></a></center>   <br>
-    <center><a href ={% url "study:problem_demo_pre2" %} ><button type="button" class="btn btn-danger btn-lg">เริ่มทำแบบทดสอบ</button></a></center>
+    <br>
+    <div style="background:#364966" class="text-white">
+    <center><h5>แบบทดสอบก่อนเรียน</h5></center>
+        <br>
+    <center><h5>เรื่อง ตรีโกณมิติ ม.3</h5></center>
+        <br>
+        <center><h5>ให้เวลาทำ 15 นาที</h5></center>
+        <br>
+        <center><h5>ข้อสอบมีทั้งหมด 10 ข้อ</h5></center>
+        <br>
+        <center><h5>ประเภทเลือกตอบ 4 ตัวเลือก และ เติมคำ</h5></center>
+    </div> <br>
+    <div style="background:#435D74">
+        <br>
+    <center><a href ={% url "homeapp:home" %}><button type="button" class="btn btn-danger btn-lg">ย้อนกลับ</button></a>
+    &nbsp;&nbsp;&nbsp;<a href ={% url "study:problem_demo_pre2" %} ><button type="button" class="btn btn-danger btn-lg">เริ่มทำแบบทดสอบ</button></a></center>
+    <br>
     </div>
 <br><br>
 <footer>
