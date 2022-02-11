@@ -13,6 +13,9 @@
         font-size: 22px;
       }
     </style>
+
+    {% if user.is_superuser %}
+
 <body style="background:#364966">
 <div style="background:#435D74" class="text-white">
 <center><h1>Complain Forms</h1></center>
@@ -54,3 +57,5 @@
 
 </body>
 </html>
+{% else %}
+{% endif %}

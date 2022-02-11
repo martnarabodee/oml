@@ -16,6 +16,10 @@
       }
     </style>
 </head>
+
+
+    {% if user.is_superuser %}
+
 <body style="background:#364966">
     <div style="background:#435D74" class="text-white">
     <center><h1>กดเพื่อเริ่มเรียนต่อ</h1></center><br>
@@ -24,4 +28,7 @@
 <center><a href ={% url "homeapp:home" %}><button type="button" class="btn btn-danger btn-lg">back to homepage</button></a></center>
     </div>
 </body>
-</html> 
+</html>
+
+{% else %}
+{% endif %}
