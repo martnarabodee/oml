@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course study</title>
+    <title>OML | เรียน</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Prompt">
     <style>
@@ -16,28 +18,33 @@
       }
     </style>
 </head>
-
-    {% if user.is_superuser %}
-
 <body style="background:#364966">
     <div style="background:#435D74" class="text-white">
-    <center><h1>อัตราส่วนตรีโกณมิติของสามเหลี่ยมมุมแหลม 3</h1></center> <br><br><br>
-        <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="trigon.png" width="2100" height="900">&nbsp;&nbsp;&nbsp;<img src="trigon2.png" width="720" height="900"></center>
-    <br><br><br><br>
-    <center><h3>รหัสVDO M13200533</h3></center> <br>
-    <center><h3>คอร์ส คณิตศาสตร์ ม.3 ภาคเรียนที่ 2 ตามหลักสูตร</h3></center> <br>
-    <center><h3>ผู้บรรยาย ภูริณัฐ พลอาสา</h3></center> <br>
-        <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg">ย้อนกลับ</button></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;<a href ={% url "study:problem_demo_post1" %} target = ><button type="button" class="btn btn-danger btn-lg">ถัดไป</button></a></center>
+    <br><h1>อัตราส่วนตรีโกณมิติ : สามเหลี่ยมมุมฉาก</h1><br>
+
+<div class="container">
+    {% for x in video %}
+        <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
+        <video class="embed-responsive embed-responsive-16by9" controls="controls" width="20%" height="20%">
+            <source src="{{x.video.url}}" type="video/mp4" />
+        </video>
+    {% endfor %}
+</div>
+{% load static %}
+    <center>
+    <img src={% static "study/demo/trigon2.png" %} width="24%" height="24%"></center>
+    <br>
+    <center><button type="button" class="btn btn-danger btn-lg">ย้อนกลับ</button></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href ={% url "study:problem_demo_post1" %} target = ><button type="button" class="btn btn-danger btn-lg">ถัดไป</button></a></center>
+    <br><h3>รหัสวิดีโอ   M13200533</h3>
+    <h3>คอร์ส คณิตศาสตร์ ม.3 ภาคเรียนที่ 2 ตามหลักสูตร</h3>
+    <h3>ผู้บรรยาย ภูริณัฐ พลอาสา</h3><br>
     </div>
-<br><br>
 <footer>
-    <span><h3><font color="white">Optimal</font><font color="red">Learning</font><font color="white"> V. a1.0</font></h3></span>
+    <span><h3><font color="white">Optimal</font><font color="red">Learning</font></span>
     <span><font color="white"><h6>© 2022 OML Team</h6></font></span>
 </footer>
 
 </body>
 </html>
-
-{% else %}
-{% endif %}

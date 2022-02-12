@@ -14,18 +14,14 @@
         font-size: 36px;
       }
     </style>
-
-    {% if user.is_superuser %}
-
 </head>
 <body style="background:#364966" class="text-center">
    <div style="background:#435D74" class="text-white">
-   Error: Page not avalible<br>
+   <br>Error: Page not avalible<br>
    หน้าดังกล่าวไม่พร้อมใช้งานในขณะนี้<br></br>
        <center><a href ="{% url "homeapp:home" %}"><button type="button" class="btn btn-danger btn-lg">Back to Homepage</button></a>
-       </center</font></center>
+       </center</font></center><br>
    </div>
-   <br><br>
    <div align="left">
        <footer>
     <span><h3><font color="white">Optimal</font><font color="red">Learning</font></h3></span>
@@ -34,7 +30,3 @@
    </div>
    </body>
 </html>
-
-{% else %}
-    <h1>ระบบ OML ได้ปิดการใช้งานแล้วในขณะนี้</h1>
-{% endif %}

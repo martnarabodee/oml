@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course instruction</title>
+    <title>OML | คำแนะนำก่อนเรียน</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet"
@@ -16,38 +16,33 @@
       }
     </style>
 </head>
-
-    {% if user.is_superuser %}
-
 <body style="background:#364966">
     <div style="background:#435D74" class="text-white">
-    <center><h1> คำแนะนำก่อนเรียน</h1></center> <br><br>
+    <br><center><h1> คำแนะนำก่อนเรียน</h1></center> <br>
     </div>
     <div style="background:#435D74" class="text-white">
-        <center><div style="background:#364966" class="text-white">	สำหรับหัวข้อ ตรีโกณมิติ ม.3 ถือเป็นอีกเรื่องที่ยากในระดับหนึ่งซึ่งข้อสอบสำหรับสอบ </div></center>
+    <center><div style="background:#364966" class="text-white">	<br>สำหรับหัวข้อ ตรีโกณมิติ ม.3 ถือเป็นอีกเรื่องที่ยากในระดับหนึ่งซึ่งข้อสอบสำหรับสอบ </div></center>
         <center><div style="background:#364966"> เข้าศึกษาระดับมัธยมปลาย และข้อสอบแข่งขันนิยมนำไปเป็นข้อสอบ ในบทความนี้จะพูดเพียง </div></center>
 <center><div style="background:#364966" class="text-white">แค่พื้นฐานของตรีโกณมิติเพียงเท่านั้น ซึ่งได้แก่ อัตราส่วนตรีโกณมิติ สมบัติของตรีโกณมิติ และ</div></center>
         <center><div style="background:#364966" class="text-white">การประยุกต์ใช้ตรีโกณมิติระดับพื้นฐาน ฟังก์ชันตรีโกณมิติ ยังไม่ทราบแน่ชัดว่าใครเป็นคนคิด</div></center>
         <center><div style="background:#364966" class="text-white">แต่ครั้งแรกที่พบ คือ บนแผ่นดินเหนียวของชาวบาบิโลน เพราะฉะนั้นเป็นเรื่องที่มีอยู่มานาน</div></center>
         <center><div style="background:#364966" class="text-white">และมีการประยุกต์ใช้อย่างต่อเนื่อง และถ้าต้องการที่จะพัฒนาฝีมือให้พร้อมก่อนทุกสนามสอบ</div></center>
-        <center><div style="background:#364966" class="text-white">อย่าลืมทำโจทย์ให้มากๆ เพื่อเพิ่มประสบการณ์นะครับ</div></center> <br>
-        <center>
+        <center><div style="background:#364966" class="text-white">อย่าลืมทำโจทย์ให้มาก ๆ เพื่อเพิ่มประสบการณ์นะครับ<br> </div></center>
+        <center><div style="background:#364966" class="text-white">  <br> </div></center>
+       <br> <center>
         <li style="background:#364966" class="list-group-item">
     <input class="form-check-input me-1" type="checkbox" value="">
             <font color="white">เข้าใจแล้ว</font>
   </li>
         </center> <br>
-    <center><a href ={% url "homeapp:home" %} target = ><div style="background:#364966" class="text-white">คลิกที่นี่เพื่อดาวน์โหลดเอกสาร</div></a></center> <br>
-    <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg">เริ่มเรียน</button></a></center>  <br>
+    <center><a href ="https://drive.google.com/file/d/1pM7KNf7y0Myb1f8KyjR_uIQbvLE7W9Iz/view?usp=sharing" target ="_blank"><div style="background:#364966" class="text-white">คลิกที่นี่เพื่อดาวน์โหลดเอกสาร</div></a></center> <br>
+    <center><a href ={% url "study:course_study" %} target = ><button type="button" class="btn btn-danger btn-lg">เริ่มเรียนเลย</button></a></center>  <br>
     <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg">กลับสู่หน้าหลัก</button></a></center>
-    </div>
-<br><br>
+    <br></div>
 <footer>
-    <span><h3><font color="white">Optimal</font><font color="red">Learning</font><font color="white"> V. a1.0</font></h3></span>
+    <span><h3><font color="white">Optimal</font><font color="red">Learning</font></span>
     <span><font color="white"><h6>© 2022 OML Team</h6></font></span>
 </footer>
 
 </body>
 </html>
-{% else %}
-{% endif %}

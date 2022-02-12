@@ -1,4 +1,6 @@
-from django.urls import path
+from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 
 app_name = "study"
@@ -17,7 +19,12 @@ urlpatterns = [
     #path('problem/select', views.problem_select, name='problem_select'),
     #path('problem/do', views.problem_do, name='problem_do'),
     path('problem/demo/pre/instruction', views.problem_demo_pre1, name='problem_demo_pre1'),
-    path('problem/demo/pre/do', views.problem_demo_pre2, name='problem_demo_pre2'),
+    path('problem/demo/pre/choice', views.problem_demo_pre2, name='problem_demo_pre2'),
+    path('problem/demo/pre/fillin', views.problem_demo_pre3, name='problem_demo_pre3'),
     path('problem/demo/post/instruction', views.problem_demo_post1, name='problem_demo_post1'),
-    path('problem/demo/post/do', views.problem_demo_post2, name='problem_demo_post2'),
+    path('problem/demo/post/choice', views.problem_demo_post2, name='problem_demo_post2'),
+    path('problem/demo/post/fillin', views.problem_demo_post3, name='problem_demo_post3'),
+    path('download/<str:oml_sheet>', views.download_file, name='download_file'),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -10,10 +10,10 @@ class CourseInfo(models.Model):
     course_description = models.CharField
     is_use = models.BooleanField(default=True)
 
-    def __str__(self) -> str:
-        return self.course_id
+    def __str__(self):
+        return self.caption
 
-
+'''
 class CourseVideo (models.Model):
     cv_id = models.PositiveIntegerField #course video id
     cv_lecturer = models.CharField 
@@ -69,4 +69,10 @@ class ProblemInfoShow (models.Model):
     pb_status = models.SmallIntegerField
     pb_donescore = models.SmallIntegerField
     pb_type = models.SmallIntegerField
-"""
+"""'''
+
+class VideoDemo(models.Model):
+    caption = models.CharField(max_length=100)
+    video = models.FileField(upload_to="video/%y")
+    def __str__(self):
+        return self.caption
