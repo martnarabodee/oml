@@ -16,9 +16,6 @@
       }
     </style>
 </head>
-
-    {% if user.is_superuser %}
-
 <body style="background:#364966">
     <div style="background:#435D74" class="text-white">
         <br>
@@ -38,8 +35,21 @@
             <br>
         </div>
     <br>
-    <center><a href ={% url "study:course_study" %}><button type="button" class="btn btn-danger btn-lg">ย้อนกลับ</button></a>
-    &nbsp;&nbsp;&nbsp;<a href ={% url "study:problem_demo_post2" %} ><button type="button" class="btn btn-danger btn-lg">เริ่มทำแบบทดสอบ</button></a></center>
+    <div style="background:#435D74">
+     <center>
+     <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <a href ={% url "study:course_study" %}><button type="button" style="background:#7B7B7B" class="btn btn-lg text-white">ย้อนกลับ</button></a>
+            </div>
+            <div class="col">
+                <a href ={% url "study:problem_demo_post2" %} ><button type="button" class="btn btn-danger btn-lg">เริ่มทำแบบทดสอบ</button></a>
+            </div>
+            <div class="col"></div>
+        </div>
+     </div></center>
+    </div>
     <br>
     </div>
 <footer>
@@ -49,6 +59,3 @@
 
 </body>
 </html>
-
-{% else %}
-{% endif %}

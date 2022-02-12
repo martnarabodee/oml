@@ -30,14 +30,26 @@
         <center><div style="background:#364966" class="text-white">อย่าลืมทำโจทย์ให้มาก ๆ เพื่อเพิ่มประสบการณ์นะครับ<br> </div></center>
         <center><div style="background:#364966" class="text-white">  <br> </div></center>
        <br> <center>
-        <li style="background:#364966" class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
-            <font color="white">เข้าใจแล้ว</font>
-  </li>
-        </center> <br>
-    <center><a href ="https://drive.google.com/file/d/1pM7KNf7y0Myb1f8KyjR_uIQbvLE7W9Iz/view?usp=sharing" target ="_blank"><div style="background:#364966" class="text-white">คลิกที่นี่เพื่อดาวน์โหลดเอกสาร</div></a></center> <br>
-    <center><a href ={% url "study:course_study" %} target = ><button type="button" class="btn btn-danger btn-lg">เริ่มเรียนเลย</button></a></center>  <br>
-    <center><a href ={% url "homeapp:home" %} target = ><button type="button" class="btn btn-danger btn-lg">กลับสู่หน้าหลัก</button></a></center>
+        <div style="background:#364966" class="text-white">
+            <li  class="list-group-item text-white" style="background:#364966">
+                <input class="form-check-input me-1" type="checkbox" value="">เข้าใจแล้ว
+            </li>
+        <a href ="https://drive.google.com/file/d/1pM7KNf7y0Myb1f8KyjR_uIQbvLE7W9Iz/view?usp=sharing" target ="_blank">
+            <font color="white">คลิกที่นี่เพื่อดาวน์โหลดเอกสาร</font></a><br>
+        </div></center><br><center>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+             	<a href ={% url "homeapp:home" %} target = ><button type="button" style="background:#7B7B7B" class="btn btn-lg text-white">กลับสู่หน้าหลัก</button></a>
+            </div>
+            <div class="col">
+                <a href ={% url "study:course_study" %} target = ><button type="button" class="btn btn-danger btn-lg">เริ่มเรียนเลย</button></a>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    </center>
     <br></div>
 <footer>
     <span><h3><font color="white">Optimal</font><font color="red">Learning</font></span>

@@ -18,12 +18,19 @@ urlpatterns = [
     #path('course/certificate', views.course_certificate, name='course_certificate'),
     #path('problem/select', views.problem_select, name='problem_select'),
     #path('problem/do', views.problem_do, name='problem_do'),
+
     path('problem/demo/pre/instruction', views.problem_demo_pre1, name='problem_demo_pre1'),
     path('problem/demo/pre/choice', views.problem_demo_pre2, name='problem_demo_pre2'),
+    path('problem/demo/pre/choice/correct', views.correct_pre2, name='correct_pre2'),
+    path('problem/demo/pre/choice/wrong', views.wrong_pre2, name='wrong_pre2'),
     path('problem/demo/pre/fillin', views.problem_demo_pre3, name='problem_demo_pre3'),
+
     path('problem/demo/post/instruction', views.problem_demo_post1, name='problem_demo_post1'),
     path('problem/demo/post/choice', views.problem_demo_post2, name='problem_demo_post2'),
+    path('problem/demo/post/choice/correct', views.correct_post2, name='correct_post2'),
+    path('problem/demo/post/choice/wrong', views.wrong_post2, name='wrong_post2'),
     path('problem/demo/post/fillin', views.problem_demo_post3, name='problem_demo_post3'),
+
     path('download/<str:oml_sheet>', views.download_file, name='download_file'),
 ]
 if settings.DEBUG:

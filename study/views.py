@@ -84,3 +84,15 @@ def problem_demo_post2(request):
 
 def problem_demo_post3(request):
     return render(request, 'study/problem_demo_post3.html')
+
+def correct_pre2(request):
+    return render(request, 'study/correct_pre2.html')
+
+def correct_post2(request):
+    return render(request, 'study/correct_post2.html')
+
+def wrong_pre2(request):
+    return render(request, 'study/wrong_pre2.html')
+
+def wrong_post2(request):
+    return render(request, 'study/wrong_post2.html')

@@ -15,36 +15,31 @@
       }
     </style>
 </head>
-<body style="background:#364966">
-    <div style="background:#435D74">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+<body style="background:#435D74" class="text-white">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-2">
         <div align="left">
             {% load static %}
-            &nbsp<img src="{% static "homeapp/logo.png" %}" width="199.5" height="46">
+            &nbsp<img src="{% static "homeapp/logo.png" %}" width="20%" height="20%">
         </div>
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <br><a href="{% url "study:course_home" %}" class="nav-link px-2 link-white"><font color="white"><h5>คอร์ส</h5></font></a>
           <a href="{% url "homeapp:error" %}" class="nav-link px-2 link-white"><font color="white"><h5>โจทย์</h5></font></a>
           <a href="{% url "homeapp:about" %}" class="nav-link px-2 link-white"><font color="white"><h5>เกี่ยวกับ</h5></font></a>
     <!--      <a href="{% url "homeapp:complain_form" %}" class="nav-link px-2 link-white"><font color="white"><h5>แจ้งปัญหา</h5></font></a> -->
             &nbsp;<a href="{% url "homeapp:contact" %}" class="nav-link px-2 link-white"><font color="white"><h5>ติดต่อ</h5></font></a>
-            <a href="{% url "study:course_home" %}"><button type="button" class="btn btn-danger">เข้าสู่ระบบ</button></a>
-            &nbsp;<a href = "{% url "study:course_home" %}"><button type="button" class="btn btn-danger">ลงทะเบียน</button></a>
+            <a href="{% url "homeapp:error" %}"><button type="button" class="btn btn-danger">เข้าสู่ระบบ</button></a>
+            &nbsp;<a href = "{% url "homeapp:error" %}"><button type="button" class="btn btn-danger">ลงทะเบียน</button></a>
         </ul>
-    </div>
       </header>
-    <div style="background:#364966" class="text-white">
+<div style="background:#364966">
     <br><center><h1>แหล่งเรียนรู้คณิตศาสตร์เพื่อนักเรียน</h1></center>
     <br><center><h1>เรียนได้ตามรูปแบบการเรียนรู้ของตนเอง</h1></center>
     <br><br><center><h2>ออกแบบรูปแบบการเรียนรู้โดย AI</h2></center>
     <br><center><h2>พัฒนาโดยรุ่นพี่ที่มากประสบการณ์</h2></center>
     <br><center><h2>เข้าใช้ระบบได้เลย ฟรี!</h2></center>
     <br><br><center><a href = "{% url "study:course_home" %}"><button type="button" class="btn btn-danger btn-lg"><h1>เริ่มเรียนเลย</h1></button><a></a></center>
-    </div><br><br>
-
+   <br><br>
+</div>
     <footer>
     <span><h3><font color="white">Optimal</font><font color="red">Learning</font></h3></span>
     <span><font color="white"><h6>© 2022 OML Team</h6></font></span>

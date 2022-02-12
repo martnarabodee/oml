@@ -20,28 +20,62 @@
     <div style="background:#364966" class="text-white">
     <center><h1>ทดสอบหลังเรียน M132005</h1></center>
         <center><h2>เรื่อง อัตราส่วนตรีโกณมิติ ม.3</h2></center>
-        <br>
-        <center><h5>ชื่อผู้ใช้ นายมาลี เจริญยิ่ง &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รหัสข้อ 9D2ACD</h5></center>
-        <br>
+
+        <center><h5>ชื่อผู้ใช้ นายมาลี เจริญยิ่ง &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รหัสข้อ 9D2ACD</h5></center><br>
         <center>
             {% load static %}
             <img src="{% static "study/demo/trigon_post.png" %}">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img src="{% static "study/demo/trigon_post2.png" %}" width="25%" height="25%">
+            <img src="{% static "study/demo/trigon_pre2.png" %}" width="25%" height="25%">
         </center>
     <br>
+        <center>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <a href="{% url "study:wrong_post2" %}"><button type="button" class="btn btn-light btn-lg">(1)</button></a>
+            </div>
+            <div class="col">
+                <a href="{% url "study:wrong_post2" %}"><button type="button" class="btn btn-light btn-lg">(2)</button></a>
+            </div>
+            <div class="col">
+                <a href="{% url "study:wrong_post2" %}"><button type="button" class="btn btn-light btn-lg">(3)</button></a>
+            </div>
+            <div class="col">
+                <a href="{% url "study:correct_post2" %}"><button type="button" class="btn btn-light btn-lg">(4)</button></a>
+            </div>
+            <div class="col"></div>
+        <br>
+        </div>
+    </div>
+        </center><br>
+
         <div style="background:#435D74" class="text-white">
             <br>
          <center>
-             <a href ={% url "study:problem_demo_post3" %}><button type="button" class="btn btn-danger btn-lg">ย้อนกลับ</button></a>&nbsp;&nbsp;&nbsp;
-             <a href ={% url "study:problem_demo_post3" %}><button type="button" class="btn btn-danger btn-lg">ถัดไป</button></a>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+             	<button type="button" class="btn btn-lg text-white" style="background:#7B7B7B">แจ้งปัญหา</button>
+            </div>
+            <div class="col">
+                <a href ={% url "study:problem_demo_post2" %}><button type="button" class="btn btn-danger btn-lg">ย้อนกลับ</button></a>
+            </div>
+            <div class="col">
+                <a href ={% url "study:problem_demo_post3" %}><button type="button" class="btn btn-danger btn-lg">ถัดไป</button></a>
+            </div>
+            <div class="col">
+             <a href ={% url "study:course_summary" %} ><button type="button" class="btn btn-lg text-white" style="background:#7B7B7B">ส่งแบบทดสอบ</button></a>
+            </div>
+            <div class="col"></div>
+        <br>
+        </div>
+    </div>
          </center>
             <br>
-        </div><br>
-        <center><button type="button" class="btn btn-danger btn-lg">แจ้งปัญหา</button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href ={% url "study:course_summary" %} ><button type="button" class="btn btn-danger btn-lg">ส่งแบบทดสอบ</button></a></center>
-    <br>
+        </div>
     </div>
 <footer>
     <span><h3><font color="white">Optimal</font><font color="red">Learning</font></span>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,29 +18,43 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
       }
     </style>
 </head>
+    {% load static %}
 <body style="background:#364966">
     <div style="background:#435D74" class="text-white">
     <br><h1>อัตราส่วนตรีโกณมิติ : สามเหลี่ยมมุมฉาก</h1><br>
-
+<center>
 <div class="container">
-    {% for x in video %}
-        <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
-        <video class="embed-responsive embed-responsive-16by9" controls="controls" width="20%" height="20%">
+  <div class="row">
+    <div class="col-lg-8">
+          {% for x in video %}
+        <video class="embed-responsive embed-responsive-16by9" controls>
             <source src="{{x.video.url}}" type="video/mp4" />
         </video>
     {% endfor %}
+    </div>
+    <div class="col-md-2">
+          <img src="{% static "study/demo/trigon2.png" %}" width=220%" height="98%">
+    </div>
+    </div>
+  </div></center><br>
 </div>
-{% load static %}
-    <center>
-    <img src={% static "study/demo/trigon2.png" %} width="24%" height="24%"></center>
-    <br>
-    <center><button type="button" class="btn btn-danger btn-lg">ย้อนกลับ</button></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href ={% url "study:problem_demo_post1" %} target = ><button type="button" class="btn btn-danger btn-lg">ถัดไป</button></a></center>
+
+    <br>  <center>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button type="button" style="background:#7B7B7B" class="btn btn-lg text-white">ย้อนกลับ</button>
+        </div>
+        <div class="col">
+            <a href ={% url "study:problem_demo_post1" %} target = ><button type="button" class="btn btn-danger btn-lg">ถัดไป</button></a>
+        </div>
+    </div>
+</div><br></center>
+<div style="background:#435D74" class="text-white">
     <br><h3>รหัสวิดีโอ   M13200533</h3>
     <h3>คอร์ส คณิตศาสตร์ ม.3 ภาคเรียนที่ 2 ตามหลักสูตร</h3>
     <h3>ผู้บรรยาย ภูริณัฐ พลอาสา</h3><br>
-    </div>
+</div>
 <footer>
     <span><h3><font color="white">Optimal</font><font color="red">Learning</font></span>
     <span><font color="white"><h6>© 2022 OML Team</h6></font></span>
