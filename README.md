@@ -1,4 +1,2 @@
 # Optimal Mathematics Learning (OML)
-An mock up website of Optimal Mathematics Learning system
-
-- use Django framework 
+This is a mock up website of OML Full system developed in 2021-2022
